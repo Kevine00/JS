@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+     <head></head>
+
+     <body>
+
+      <script>
+var nu1 = prompt("Enter the first number:");
+
+if (Number.isNaN(parseFloat(nu1))) {
+    console.log("Error: Invalid input for the first number.");
+} else {
+
+    var num2 = prompt("Enter the second number:");
+
+    if (Number.isNaN(parseFloat(num2))) {
+        console.log("Error: Invalid input for the second number.");
+    } else {
+        var operation = prompt("Enter a mathematical operation (+, -, *, /):");
+
+
+        if (operation === "+" || operation === "-" || operation === "*" || operation === "/") {
+           
+            var result;
+            switch (operation) {
+                case "+":
+                    result = parseFloat(num1) + parseFloat(num2);
+                    break;
+                case "-":
+                    result = parseFloat(num1) - parseFloat(num2);
+                    break;
+                case "*":
+                    result = parseFloat(num1) * parseFloat(num2);
+                    break;
+                case "/":
+                   
+                    if (parseFloat(num2) === 0) {
+                        console.log("Error: Cannot divide by zero.");
+                        break;
+                    }
+                    result = parseFloat(num1) / parseFloat(num2);
+                    break;
+            }
+
+            console.log("Result: " + result);
+        } else {
+            console.log("Error: Invalid operation.");
+        }
+    }
+}
+ 
+      </script>
+     </body>
+
+</html>
